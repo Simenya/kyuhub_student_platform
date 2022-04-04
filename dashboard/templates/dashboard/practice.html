@@ -1,0 +1,397 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="{% static './css/style.css'%}">
+    <link rel="stylesheet" href="{% static './css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static './css/cal.css'%}">
+</head>
+
+<body>
+<section class="">
+        <div class="container-fluid">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6886.6 289.1" class="nav-svg"
+                style="enable-background:new 0 0 6886.6 289.1;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: url(#SVGID_1_);
+                    }
+                </style>
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3443.3113" y1="297.8759" x2="3443.3113"
+                    y2="586.9759" gradientTransform="matrix(1 0 0 -1 0 581)">
+                    <stop offset="0" style="stop-color:#FFFFFF" />
+                    <stop offset="0.1389" style="stop-color:#CAF2EF" />
+                    <stop offset="0.31" style="stop-color:#90E3DE" />
+                    <stop offset="0.4757" style="stop-color:#60D7CF" />
+                    <stop offset="0.6316" style="stop-color:#3ACDC4" />
+                    <stop offset="0.7753" style="stop-color:#1FC7BC" />
+                    <stop offset="0.9025" style="stop-color:#0FC2B7" />
+                    <stop offset="1" style="stop-color:#09C1B5" />
+                </linearGradient>
+                <path class="st0" d="M0,0h6886.6v225c0,0-1192.1,101.6-2452.7,20.8c-975.8-62.5-1381-24.8-2198.3,18.2
+	C889.8,334.8,0.1,233.3,0.1,233.3V0H0z" />
+            </svg>
+
+        </div>
+        <div class="container">
+
+            <nav class="navbar navbar-expand-sm navbar-light bg-transparent" id="navbar">
+                <a class="navbar-brand" href="#">KyuHub </a>
+                <button class="navbar-toggler d-lg-none " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                 <div class="collapse navbar-collapse d-md-none" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-md-none">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="http://127.0.0.1:8000/">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/practice">Practice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/statistics">Statistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/settings">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://127.0.0.1:8000/help">Help</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container main">
+        <div class="row my-2 justify-content-center  ">
+            <!-- Side bar1 -->
+            <div
+                class="col-md-2 justify-content-center align-items-center py-5 d-none d-md-block bg-white sidebar1 h-100">
+                <div class="btn btn-primary  w-100 fw-bolder text-center mt-3 mb-3 mb-lg-5">
+                    <h4>KyuHub</h4>
+                </div>
+
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="http://127.0.0.1:8000/">
+                    <h6>HOME</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2" href="http://127.0.0.1:8000/resources">
+                    <h6>RESOURCES</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="http://127.0.0.1:8000/practice">
+                    <h6>PRACTICE</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
+                    <h6>CHAT</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
+                    <h6>STATISTICS</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
+                    <h6>YEAR BOOK</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
+                    <h6>SETTINGS</h6>
+                </a>
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2  mb-5" href="http://127.0.0.1:8000/help">
+                    <h6>HELP</h6>
+                </a>
+
+                <div class="d-flex justify-content-center mb-lg-2">
+                    <button type="button" class="btn btn-sm rounded-2 btn-outline-primary  w-75 d-none d-md-block">Check
+                        Portal</button>
+                </div>
+
+            </div>
+
+            <!-- Main content -->
+            <div class="col-md-7 justify-content-center ">
+
+                <!-- <h3 class="text-dark position-absolute float">Trending</h3> -->
+                <div class="card text-center  bg-white  w-100 main-tab">
+                    <div class="btn btn-lg fw-bolder h2">Challenge Hub</div>
+
+                </div>
+                <!-- <img src="./img/encourage final.jpg"
+                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} shadow-lg align-items-center my-1"
+                    alt="" id="slider"> -->
+
+                <!-- resources hub -->
+                <div class="row my-1 g-1 resources">
+                    <div class="col-md-4">
+                        <a href="{%static './quiz/infoSec/test.html'%}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img66.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">Network Security Mgt Concepts</h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> Information security</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Easy</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="{% static './quiz/numerical/test.html' %}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">Numerical Analysis</h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> Errors & Approximations</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Intermediate</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="{% static './quiz/dataComm/test.html' %}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img21.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">Intro to Data Communication</h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> The TCP/IP Model</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Easy</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row my-1 g-1 resources">
+                    <div class="col-md-4">
+                        <a href="{% static './quiz/infoSec/test.html' %}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img11.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">OS Implementation</h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> The Linux Kernel</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Easy</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="{% static './quiz/numerical/test.html' %}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img55.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">Graphy Theory </h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> Fundamentals</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Easy</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="{% static './quiz/dataComm/test.html' %}" style="margin: 0; padding: 0; text-decoration: none;">
+                            <div class="card  border-0 ">
+                                <img class="card-img-top" src="{% static './img/img21.jpg' %}" alt="">
+                                <div class="card-body">
+                                    <h6 class="fw-bold">Software Engineering</h6>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="text-muted">Topic: </span> Project mgt</li>
+                                        <li><span class="text-muted">Level: </span> <span
+                                                class="text-sm-start text-primary">Hard</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Actions  -->
+
+
+                <!-- Card Actions  -->
+
+                <!-- Pagination  -->
+
+                <div class="row ">
+                    <div class="d-flex m-1  justify-content-end ">
+                        <nav aria-label="Standard pagination example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="./index.html">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Pagination  -->
+                <!-- resource hub -->
+
+
+
+            </div>
+
+            <!-- Side bar 2 -->
+            <div class="col-md-3    ">
+                <div class="row d-flex flex-column   align-items-center">
+                    <div class="btn my-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="bell">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: url(#SVGID_1_);
+                                }
+                            </style>
+                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="276.7461" y1="-38.1567"
+                                x2="260.7461" y2="89.8433">
+                                <stop offset="0.1005" style="stop-color:#FFFFFF" />
+                                <stop offset="0.1786" style="stop-color:#F8FDFD" />
+                                <stop offset="0.295" style="stop-color:#E3F8F8" />
+                                <stop offset="0.4354" style="stop-color:#C2EFF0" />
+                                <stop offset="0.5932" style="stop-color:#94E3E4" />
+                                <stop offset="0.6442" style="stop-color:#84DFE0" />
+                                <stop offset="0.7562" style="stop-color:#5ED5D6" />
+                                <stop offset="1" style="stop-color:#00BCBF" />
+                            </linearGradient>
+                            <path class="st0" d="M439.4,362.3c-19.3-20.8-55.5-52-55.5-154.3c0-77.7-54.5-139.9-127.9-155.2V32c0-17.7-14.3-32-32-32
+    s-32,14.3-32,32v20.8C118.6,68.1,64.1,130.3,64.1,208c0,102.3-36.2,133.5-55.5,154.3C2.6,368.7,0,376.4,0,384
+    c0.1,16.4,13,32,32.1,32h383.8c19.1,0,32-15.6,32.1-32C448,376.4,445.4,368.7,439.4,362.3L439.4,362.3z M67.5,368
+    c21.2-28,44.4-74.3,44.5-159.4c0-0.2-0.1-0.4-0.1-0.6c0-61.9,50.1-112,112-112s112,50.1,112,112c0,0.2-0.1,0.4-0.1,0.6
+    C336,293.7,359.3,340,380.5,368H67.5z M224,512c35.3,0,64-28.6,64-64H160C160,483.4,188.7,512,224,512z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-warning py-2">
+                        CALENDAR
+                    </h3>
+                    <section class="cal-widget my-2">
+                        <div class="box ">
+                            <div class="container1 ">
+                                <div id="calendar">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+
+
+                <div class="card bg-transparent border-0 mt-4">
+                    <h6 class="card-title text-primary fw-bold">UPCOMING EVENTS</h6>
+                    <p class="text-white">
+                    <ul class="text-white">
+                        <li>GDSC Hackthon <span
+                                style="font-style: italic; color: rgb(2, 92, 236); font-size: small;">25th
+                                Nov,2021</span></li>
+                        <li>Incubation Week</li>
+                        <li class="text-danger fw-bold">Fresher's Ball</li>
+                    </ul>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">
+                Side Menu
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li>Home</li>
+                <li>Books</li>
+                <li>Settings</li>
+                <li>About</li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static './js/bootstrap.bundle.js'%}"></script>
+
+    <script src="{% static './js/calendar.js'%}"></script>
+    <script>
+        dycalendar.draw({
+            target: '#calendar',
+            type: 'month',
+            dayformat: 'full',
+            monthformat: 'full',
+            highlighttargetdate: true,
+            prevnextbutton: 'show'
+
+        })
+    </script>
+    <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46156385-1', 'cssscript.com');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- Chart JS -->
+    <script src="{% static './plugins/chart.js/chart.min.js'%}"></script>
+    <script src="{% static './js/index-charts.js'%}"></script>
+    <!-- Chart JS -->
+</body>
+
+</html>
