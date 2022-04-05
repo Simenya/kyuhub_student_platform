@@ -1,14 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kyuhub</title>
+    <title>Chat Universally</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
 </head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin: 15px 0px;
+        width: 600px;
+        height: 100vh;
+        background: rgb(29, 27, 27);
+        border: 2px lightgray solid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head {
+        flex: 1;
+        border: 2px blue;
+        background-color: white;
+
+    }
+
+    .main {
+        flex: 4;
+        border: 2px blue;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .text-area {
+        flex: 0.6;
+        border: 2px blue;
+        background-color: white;
+        border-radius: 5px;
+        padding-left: 5px;
+        margin: 3px 2px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+
+    }
+
+    input {
+        border: 1px solid rgba(0, 255, 21, 0.692);
+        outline: none;
+        border-radius: 10px;
+        background-color: rgb(231 227 227);
+        min-height: 40px;
+        padding: 5px;
+        width: 100%;
+
+    }
+
+    button {
+        border-radius: 9px;
+        padding: 5px;
+        background-color: darkgoldenrod;
+        border-style: none;
+        width: 100px;
+
+
+
+    }
+
+    button:hover {
+        outline: cyan;
+        background-color: rgb(56, 28, 156);
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 3em;
+        font-weight: bold;
+        color: chartreuse;
+    }
+
+    .message {
+        /* border:2px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgreen;
+        padding: 10px 10px;
+        min-height: 60px;
+        margin-left: 12%;
+        margin-top: 8px;
+        width: 80%;
+        border-radius: 10px;
+        position: relative;
+        z-index: 3;
+        box-sizing: border-box;
+    }
+
+    .message::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: lightgreen;
+        left: -8%;
+        /* border:2px solid greenyellow; */
+        z-index: -1;
+        clip-path: polygon(30% 0%, 30% 50%, 0% 0%);
+    }
+
+    .user {
+        /* border:2px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(209, 211, 209);
+        padding: 10px 10px;
+        min-height: 60px;
+        margin-left: 12%;
+        margin-top: 8px;
+        width: 80%;
+        border-radius: 10px;
+        position: relative;
+        z-index: 3;
+        box-sizing: border-box;
+    }
+
+    .user::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(209, 211, 209);
+        /* left:-8%; */
+        left: 78%;
+        /* border:2px solid greenyellow; */
+        z-index: 0;
+        /* clip-path: polygon(30% 0%, 30% 50%, 0% 0%); */
+        clip-path: polygon(30% 0%, 0% 30%, 0% 0%);
+    }
+
+    p {
+        box-sizing: content-box;
+    }
+
+    #add {
+        display: flex;
+        padding: 5px;
+    }
+</style>
+
 <body>
-    <h2>
-    Home Sweet home
-    </h2>
+
+    <div class="container">
+        <div class="head">
+            <p class="heading">ChatBot</p>
+
+        </div>
+        <div class="main">
+            <div class="user">
+                <p>Hi, Welcome to KyuHub</p>
+            </div>
+            <div class="user">
+                <p>Have a querry, How can I help you?</p>
+            </div>
+        </div>
+        <div class="text-area">
+            <form id="add" autocomplete="off">
+                <input type="text" placeholder="What do you offer" name="team">
+                <button>send</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const store = {
+            'hi': 'Hello, How can I help you?',
+            'hay': 'Hello, am glad to here from you.',
+            'hello': 'How are you doing dia?',
+            'menu': 'pastpapers\n chat\n inquire\n discover',
+            'chat': 'Welcome to the chatRoom, We hope you will have a good time being around.',
+            'services': 'Yes, everyone is allowed to access the labs provided they present an identification card at the entrance',
+
+        }
+        const accuracy = (a) => {
+            if (a in store) {
+                console.log(store[a])
+                return store[a]
+            }
+            else {
+                console.log('option not in here, try with the command \'menu\' to see all the available options')
+
+                return 'option not in here, try with the command \'menu\' to see all the available options'
+            }
+        }
+
+
+        const dialog = document.querySelector('.main')
+        const addForm = document.forms['add']
+
+        addForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            //information fetching a soon as it is entered
+            const field = addForm.querySelector('input[type="text"]')
+            const entry = field.value
+            //Element creation
+            const message = document.createElement('div')
+            message.className = 'message'
+            const paragraph = document.createElement('p')
+            const paragrap = document.createElement('p')//Chat bot
+            //Chat boot
+            const boot_message = document.createElement('div')
+            boot_message.className = 'user'
+            //content and element addition
+            paragraph.textContent = entry
+            message.appendChild(paragraph)
+            dialog.appendChild(message)
+            //chat_boot content
+            //content and element addition
+            paragrap.textContent = accuracy(entry.toLowerCase())
+            boot_message.appendChild(paragrap)
+            dialog.appendChild(boot_message)
+
+            //clearing the input
+            field.value = ""
+
+        })
+
+    </script>
 </body>
+
 </html>

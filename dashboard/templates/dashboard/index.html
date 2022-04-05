@@ -61,7 +61,7 @@
                             <a class="nav-link" href="http://127.0.0.1:8000/practice">Practice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Chat</a>
+                            <a class="nav-link" href="http://127.0.0.1:8000/chat">Chat</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://127.0.0.1:8000/statistics">Statistics</a>
@@ -98,7 +98,7 @@
                 <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="http://127.0.0.1:8000/practice">
                     <h6>PRACTICE</h6>
                 </a>
-                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
+                <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="http://127.0.0.1:8000/chat">
                     <h6>CHAT</h6>
                 </a>
                 <a class="bt btn btn-success  w-100 fw-bolder text-center my-2 " href="#">
@@ -163,29 +163,35 @@
                             <div class="container">
                                 <div class="mt-5 p-5 align-items-center">
                                     <div class="carousel-caption ">
-                                        <h4 class="text-start ">One more for good measure.</h3>
-                                            <p class="text-start">Some representative placeholder content for the third
-                                                slide of this carousel.
-                                            </p>
-                                            <p><a class="btn btn-sm btn-primary" href="#">Browse gallery</a></p>
-                                    </div>
+                                        <h6 class="text-start text-warning">One more for good measure.</h6>
+                                        <p class="text-start text-warning">
+                                            "Learn continually, there's always one more thing to learn."
+                                        </p>
+                                        
+                                    </div>>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <svg class="bd-placeholder-img" width="100%" height="100%"
+
+
+                            {% comment %} <svg class="bd-placeholder-img" width="100%" height="100%"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                                 preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <rect width="100%" height="100%" fill="#777" />
-                            </svg>
+                            </svg> {% endcomment %}
+
+                            <img src="{% static './img/kyuhub1.png'%}"
+                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} shadow-lg align-items-center my-1"
+                                alt="" id="slider">
 
 
 
                             <div class="container">
                                 <div class="carousel-caption">
-                                    <h1>Another example headline.</h1>
+                                    {% comment %} <h1>Another example headline.</h1>
                                     <p>Some representative placeholder content for the second slide of the carousel.</p>
-                                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -196,18 +202,18 @@
                                 <rect width="100%" height="100%" fill="#777" />
                             </svg> -->
 
-                            <img src="{% static './img/img3.jpg'%}"
+                            <img src="{% static './img/img11.jpg'%}"
                                 class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} shadow-lg align-items-center my-1"
                                 alt="" id="slider">
 
                             <div class="container ">
                                 <div class="mt-5 p-5 align-items-center">
                                     <div class="carousel-caption ">
-                                        <h6 class="text-start ">One more for good measure.</h6>
+                                        <h6 class="text-start text">One more for good measure.</h6>
                                         <p class="text-start">
                                             "Learn continually, there's always one more thing to learn."
                                         </p>
-                                        <p><a class="btn btn-sm btn-primary" href="#">Browse gallery</a></p>
+                                        
                                     </div>
                                 </div>
                             </div>
