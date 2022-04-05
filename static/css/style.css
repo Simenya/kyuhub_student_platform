@@ -1,7 +1,10 @@
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 body{
-    background-image: url(../img/img2.jpg);
+    /* background-image: url(../img/img2.jpg); */
+    background-image: url(../../media/img2.jpg);
+    /* {% static './img/img3.jpg'%} */
     /* background-image: url(../../media/img2.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
